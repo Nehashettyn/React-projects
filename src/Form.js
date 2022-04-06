@@ -50,6 +50,7 @@ class Form extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div>
+          <h1>Feedback Form</h1>
           <label>User Name : </label>
           <input
             type="text"
