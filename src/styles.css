@@ -1,0 +1,50 @@
+.outside {
+  background-color: beige;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+form {
+  margin: 0 auto;
+  width: 70%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.inside {
+  margin: 0 auto;
+  width: 35%;
+}
+
+div + div {
+  margin-top: 1em;
+}
+
+input,
+textarea,
+select {
+  width: 200px;
+}
+
+button {
+  margin: 0.5em;
+  font-size: 1em;
+  text-transform: capitalize;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+#submitbutton {
+  display: flex;
+  justify-content: center;
+}
