@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./styles.css";
 
 class Form extends Component {
   constructor() {
@@ -48,35 +49,41 @@ class Form extends Component {
   render() {
     const { userName, comments, topic } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <h1>Feedback Form</h1>
-          <label>User Name : </label>
-          <input
-            type="text"
-            value={userName}
-            onChange={this.handleUserNameChange}
-          ></input>
-        </div>
-        <div>
-          <label>Comments : </label>
-          <textarea
-            type="text"
-            value={comments}
-            onChange={this.handleCommentsChange}
-          ></textarea>
-        </div>
-        <div>
-          <label>Select Topic : </label>
-          <select value={topic} onChange={this.handleTopicChange}>
-            <option value="Javascript">Javascript</option>
-            <option value="React">React</option>
-            <option value="Angular">Angular</option>
-          </select>
-        </div>
+      <div className="outside">
+        <form onSubmit={this.handleSubmit}>
+          <h1 id="title">Feedback Form</h1>
+          <div className="inside">
+            <div>
+              <label>User Name : </label>
+              <input
+                type="text"
+                value={userName}
+                onChange={this.handleUserNameChange}
+              ></input>
+            </div>
+            <div>
+              <label>Comments : </label>
+              <textarea
+                type="text"
+                value={comments}
+                onChange={this.handleCommentsChange}
+              ></textarea>
+            </div>
+            <div>
+              <label>Select Topic : </label>
+              <select value={topic} onChange={this.handleTopicChange}>
+                <option value="Javascript">Javascript</option>
+                <option value="React">React</option>
+                <option value="Angular">Angular</option>
+              </select>
+            </div>
 
-        <button type="submit">Submit</button>
-      </form>
+            <div id="submitbutton">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
     );
   }
 }
